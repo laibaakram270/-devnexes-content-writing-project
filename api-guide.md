@@ -41,4 +41,14 @@ fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
 })
 .then(res => res.json())
 .then(data => console.log(data));
+### POST /pages
+Create a new page in a database.
+
+**cURL:**
+```bash
+curl -X POST "https://api.notion.com/v1/pages" \
+-H "Authorization: Bearer YOUR_TOKEN" \
+-H "Notion-Version: 2022-06-28" \
+-H "Content-Type: application/json" \
+-d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
 
