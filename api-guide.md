@@ -28,16 +28,17 @@ Retrieve a database.
 curl -X GET "https://api.notion.com/v1/databases/DATABASE_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Notion-Version: 2022-06-28"
-
 **Python:**
-```
+```python
 import requests
 headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28"}
 response = requests.get("https://api.notion.com/v1/databases/DATABASE_ID", headers=headers)
 print(response.json())
-
+**JavaScript:**
+```javascript
 fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28"}
 })
-
+.then(res => res.json())
+.then(data => console.log(data));
 
