@@ -23,7 +23,7 @@ Full structure and headings for the Notion case study.
 800-word first draft of the case study.
 
 ### Week 4: Final Article + SEO
-**File**: `-final.md`  
+**File**: `final.md`  
 1000-word final case study with meta description, keywords, table, and CTA.
 
 ## 🛠 Tools Used
