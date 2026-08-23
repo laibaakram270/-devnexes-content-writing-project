@@ -1,7 +1,5 @@
 # Notion Developer API Guide
 
-**Word Count Target**: 1000 words
-
 ## 1. Introduction
 The Notion API allows developers to read and write data to Notion pages, databases, and blocks programmatically. This guide covers authentication and 3 core endpoints for building integrations.
 
