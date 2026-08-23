@@ -26,12 +26,14 @@ Retrieve a database.
 curl -X GET "https://api.notion.com/v1/databases/DATABASE_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Notion-Version: 2022-06-28"
+```
 **Python:**
 ```python
 import requests
 headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28"}
 response = requests.get("https://api.notion.com/v1/databases/DATABASE_ID", headers=headers)
 print(response.json())
+```
 **JavaScript:**
 ```javascript
 fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
@@ -39,9 +41,7 @@ fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
 })
 .then(res => res.json())
 .then(data => console.log(data));
-
-
-
+```
 ### POST /pages
 Create a new page in a database.
 
@@ -52,6 +52,7 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Notion-Version: 2022-06-28" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
+```
 Python:
 pythonimport requests
 import json
@@ -60,6 +61,7 @@ headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28",
 data = {"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}
 response = requests.post(url, headers=headers, data=json.dumps(data))
 print(response.json())
+```
 JavaScript:
 javascriptfetch("https://api.notion.com/v1/pages", {
   method: "POST",
@@ -68,6 +70,7 @@ javascriptfetch("https://api.notion.com/v1/pages", {
 })
 .then(res => res.json())
 .then(data => console.log(data));
+```
 
 
 
@@ -75,7 +78,7 @@ javascriptfetch("https://api.notion.com/v1/pages", {
 ```md
 ### PATCH /pages/{page_id}
 Update a page property.
-
+```
 **cURL:**
 ```bash
 curl -X PATCH "https://api.notion.com/v1/pages/PAGE_ID" \
@@ -83,7 +86,9 @@ curl -X PATCH "https://api.notion.com/v1/pages/PAGE_ID" \
 -H "Notion-Version: 2022-06-28" \
 -H "Content-Type: application/json" \
 -d '{"properties": {"Status": {"select": {"name": "Done"}}}}'
+```
 Python:
+```python:
 import requests
 import json
 url = "https://api.notion.com/v1/pages/PAGE_ID"
@@ -91,7 +96,9 @@ headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28",
 data = {"properties": {"Status": {"select": {"name": "Done"}}}}
 response = requests.patch(url, headers=headers, data=json.dumps(data))
 print(response.json())
-JavaScipt:
+```
+
+```JavaScipt:
 fetch("https://api.notion.com/v1/pages/PAGE_ID", {
   method: "PATCH",
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
