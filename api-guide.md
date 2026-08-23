@@ -44,7 +44,6 @@ fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
 ```
 ### POST /pages
 Create a new page in a database.
-
 **cURL:**
 ```bash
 curl -X POST "https://api.notion.com/v1/pages" \
@@ -53,9 +52,10 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
 ```
+
 **Python:**
-```Python:
-pythonimport requests
+```Python
+import requests
 import json
 url = "https://api.notion.com/v1/pages"
 headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"}
@@ -64,8 +64,8 @@ response = requests.post(url, headers=headers, data=json.dumps(data))
 print(response.json())
 ```
 **JavaScript:**
-```JavaScript:
-javascriptfetch("https://api.notion.com/v1/pages", {
+```JavaScript
+fetch("https://api.notion.com/v1/pages", {
   method: "POST",
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
   body: JSON.stringify({parent: {database_id: "DATABASE_ID"}, properties: {Name: {title: [{text: {content: "New Task"}}]}}})
@@ -90,7 +90,7 @@ curl -X PATCH "https://api.notion.com/v1/pages/PAGE_ID" \
 -d '{"properties": {"Status": {"select": {"name": "Done"}}}}'
 ```
 Python:
-```python:
+```python
 import requests
 import json
 url = "https://api.notion.com/v1/pages/PAGE_ID"
