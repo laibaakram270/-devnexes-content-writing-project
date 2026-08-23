@@ -5,25 +5,25 @@ This repository contains my complete work for the Devnexes Technical Writing Int
 
 ## 📁 Portfolio Contents
 
-### Week 0: API Documentation
+### Week 1: API Documentation
 **File**: `api-guide.md`  
 Documented 3 Notion API endpoints with examples in cURL, Python, and JavaScript.  
 Includes: Authentication, Create Database, Add Page
 
-### Week 1: Research  
-**File**: `week1-research.md`  
+### Week 2: Research  
+**File**: `research.md`  
 Target audience, problem statement, and competitor analysis for Notion.
 
-### Week 2: Outline
-**File**: `week2-outline.md`  
+### Week 3: Outline
+**File**: `outline.md`  
 Full structure and headings for the Notion case study.
 
-### Week 3: First Draft
-**File**: `week3-draft.md`  
+### Week 4: First Draft
+**File**: `draft.md`  
 800-word first draft of the case study.
 
 ### Week 4: Final Article + SEO
-**File**: `week4-final.md`  
+**File**: `-final.md`  
 1000-word final case study with meta description, keywords, table, and CTA.
 
 ## 🛠 Tools Used
