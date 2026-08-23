@@ -29,7 +29,6 @@ Setting up Notion took 1 afternoon.
 **Step 2**: I created a "Clients Database" where each client has their own page with briefs, invoices, and content calendar
 **Step 3**: I imported my old Google Docs and made a template for blog posts so I never start blank again
 
-[Screenshot idea: Notion dashboard with tasks, calendar, and notes in 3 columns]
 
 ## Results
 After 30 days using Notion, here’s what changed:
@@ -50,5 +49,3 @@ My stress dropped and my output doubled. Clients also noticed because I delivere
 ## Conclusion
 Notion didn't just replace my apps. It replaced the chaos.
 If you're a student, freelancer, or small team juggling multiple tools, try consolidating into one workspace.
-
-**Try it**: Start with Notion's free plan and duplicate my "Freelancer Dashboard" template here: [your template link]
