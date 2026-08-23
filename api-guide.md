@@ -53,7 +53,7 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
 ```
-Python:
+```Python:
 pythonimport requests
 import json
 url = "https://api.notion.com/v1/pages"
