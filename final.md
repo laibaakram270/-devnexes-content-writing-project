@@ -43,7 +43,6 @@ Table view with properties: Client Name, Status, Due Date, Invoice. Click a clie
 **Step 3: Content Templates**
 Made templates for Blog Posts, Social Captions, and Client Proposals. Cut my writing setup time by 80%.
 
-*[Insert Screenshot: Notion Dashboard with 3 columns]*
 
 ## The Results: 10 Hours Saved Every Week
 After 30 days of using Notion:
