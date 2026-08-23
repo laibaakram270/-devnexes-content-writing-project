@@ -41,6 +41,9 @@ fetch("https://api.notion.com/v1/databases/DATABASE_ID", {
 })
 .then(res => res.json())
 .then(data => console.log(data));
+
+
+
 ### POST /pages
 Create a new page in a database.
 
