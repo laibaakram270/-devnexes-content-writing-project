@@ -1,6 +1,6 @@
 # How Notion Replaced 5 Apps and Saved Me 10 Hours a Week [Case Study]
 
-**Meta Description**: A real case study on how a freelancer used Notion to replace 5 productivity apps, save 10 hours per week, and stop missing deadlines.
+**Description**: A real case study on how a freelancer used Notion to replace 5 productivity apps, save 10 hours per week, and stop missing deadlines.
 
 **Keywords**: notion case study, productivity tool, all in one workspace, notion for students, notion for freelancers
 
