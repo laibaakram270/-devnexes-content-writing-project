@@ -32,8 +32,6 @@ The rollout took 2 weeks.
 **Week 2**: Migrated 200+ Google Docs. Trained team with 2 workshops. Created SOPs in Notion wiki.
 **Key Feature**: Linked "Task" database to "Client" database so every task shows client name, deadline, and assets.
 
-*[Insert Screenshot: Notion Agency Dashboard with Calendar + Kanban]*
-
 ## 6. Measurable Results
 After 60 days using Notion:
 
