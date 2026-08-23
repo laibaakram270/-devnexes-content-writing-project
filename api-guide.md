@@ -29,6 +29,7 @@ curl -X GET "https://api.notion.com/v1/databases/DATABASE_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Notion-Version: 2022-06-28"
 
+```Python:
 import requests
 headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28"}
 response = requests.get("https://api.notion.com/v1/databases/DATABASE_ID", headers=headers)
