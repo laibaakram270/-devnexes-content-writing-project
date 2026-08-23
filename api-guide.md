@@ -54,4 +54,18 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Notion-Version: 2022-06-28" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
+Python:pythonimport requests
+import json
+url = "https://api.notion.com/v1/pages"
+headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"}
+data = {"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}
+response = requests.post(url, headers=headers, data=json.dumps(data))
+print(response.json())
+JavaScript:javascriptfetch("https://api.notion.com/v1/pages", {
+  method: "POST",
+  headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
+  body: JSON.stringify({parent: {database_id: "DATABASE_ID"}, properties: {Name: {title: [{text: {content: "New Task"}}]}}})
+})
+.then(res => res.json())
+.then(data => console.log(data));
 
