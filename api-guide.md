@@ -53,6 +53,7 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
 ```
+**Python:**
 ```Python:
 pythonimport requests
 import json
@@ -62,6 +63,7 @@ data = {"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title
 response = requests.post(url, headers=headers, data=json.dumps(data))
 print(response.json())
 ```
+**JavaScript:**
 ```JavaScript:
 javascriptfetch("https://api.notion.com/v1/pages", {
   method: "POST",
@@ -97,8 +99,8 @@ data = {"properties": {"Status": {"select": {"name": "Done"}}}}
 response = requests.patch(url, headers=headers, data=json.dumps(data))
 print(response.json())
 ```
-
-```JavaScipt:
+**JavaScipt**:
+```JavaScript
 fetch("https://api.notion.com/v1/pages/PAGE_ID", {
   method: "PATCH",
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
