@@ -101,4 +101,21 @@ fetch("https://api.notion.com/v1/pages/PAGE_ID", {
 })
 .then(res => res.json())
 .then(data => console.log(data));
+```
+## 4. Error Handling
+Notion API returns standard HTTP codes.
+
+| Code | Meaning | Fix |
+| --- | --- | --- |
+| 401 | Unauthorized | Check your Bearer token |
+| 404 | Not Found | Verify database_id or page_id |
+| 429 | Rate Limited | Wait 1 second and retry |
+
+Example Python error handling:
+```python
+try:
+    response = requests.post(url, headers=headers, json=data)
+    response.raise_for_status()
+except requests.exceptions.HTTPError as err:
+    print(f"Error: {err}")
 
