@@ -62,7 +62,7 @@ data = {"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title
 response = requests.post(url, headers=headers, data=json.dumps(data))
 print(response.json())
 ```
-JavaScript:
+```JavaScript:
 javascriptfetch("https://api.notion.com/v1/pages", {
   method: "POST",
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
