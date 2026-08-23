@@ -9,9 +9,6 @@ This repository contains two main deliverables for the Content Writing Internshi
 - `/case-study.md` - B2B Case Study
 - `/api-guide.md` - Developer API Guide
 
-## Demo Video
-*To be added in Week 4*
-
 ## Tools & Standards
 - AP Style Guide
 - Markdown
