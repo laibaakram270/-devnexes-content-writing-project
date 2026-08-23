@@ -54,17 +54,50 @@ curl -X POST "https://api.notion.com/v1/pages" \
 -H "Notion-Version: 2022-06-28" \
 -H "Content-Type: application/json" \
 -d '{"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}'
-Python:pythonimport requests
+Python:
+pythonimport requests
 import json
 url = "https://api.notion.com/v1/pages"
 headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"}
 data = {"parent": {"database_id": "DATABASE_ID"}, "properties": {"Name": {"title": [{"text": {"content": "New Task"}}]}}}
 response = requests.post(url, headers=headers, data=json.dumps(data))
 print(response.json())
-JavaScript:javascriptfetch("https://api.notion.com/v1/pages", {
+JavaScript:
+javascriptfetch("https://api.notion.com/v1/pages", {
   method: "POST",
   headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
   body: JSON.stringify({parent: {database_id: "DATABASE_ID"}, properties: {Name: {title: [{text: {content: "New Task"}}]}}})
+})
+.then(res => res.json())
+.then(data => console.log(data));
+
+
+
+#### **ENDPOINT 3: PATCH**
+```md
+### PATCH /pages/{page_id}
+Update a page property.
+
+**cURL:**
+```bash
+curl -X PATCH "https://api.notion.com/v1/pages/PAGE_ID" \
+-H "Authorization: Bearer YOUR_TOKEN" \
+-H "Notion-Version: 2022-06-28" \
+-H "Content-Type: application/json" \
+-d '{"properties": {"Status": {"select": {"name": "Done"}}}}'
+Python:
+import requests
+import json
+url = "https://api.notion.com/v1/pages/PAGE_ID"
+headers = {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"}
+data = {"properties": {"Status": {"select": {"name": "Done"}}}}
+response = requests.patch(url, headers=headers, data=json.dumps(data))
+print(response.json())
+JavaScipt:
+fetch("https://api.notion.com/v1/pages/PAGE_ID", {
+  method: "PATCH",
+  headers: {"Authorization": "Bearer YOUR_TOKEN", "Notion-Version": "2022-06-28", "Content-Type": "application/json"},
+  body: JSON.stringify({properties: {Status: {select: {name: "Done"}}}})
 })
 .then(res => res.json())
 .then(data => console.log(data));
