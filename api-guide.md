@@ -1,24 +1,30 @@
-# [SaaS Name] Developer API Guide
+# Notion Developer API Guide
 
 **Word Count Target**: 1000 words
 
 ## 1. Introduction
-Overview of the API
+The Notion API allows developers to read and write data to Notion pages, databases, and blocks programmatically. This guide covers authentication and 3 core endpoints for building integrations.
 
 ## 2. Authentication
-How to authenticate requests
+Notion uses OAuth 2.0 and Internal Integration Tokens.
+1. Go to https://www.notion.so/my-integrations
+2. Create new integration and copy the "Internal Integration Token"
+3. Share databases/pages with your integration
+
+Header format:
+`Authorization: Bearer YOUR_INTERNAL_TOKEN`
+`Notion-Version: 2022-06-28`
 
 ## 3. Base URL
-`https://api.[saas].com/v1`
+`https://api.notion.com/v1`
 
 ## 4. Endpoints
 
-### GET /users
-### POST /tasks  
-### DELETE /tasks/{id}
+### GET /databases/{database_id}
+Retrieve a database.
 
-## 5. Error Codes
-Common HTTP status codes
-
-## 6. Rate Limits
-API usage limits
+**cURL:**
+```bash
+curl -X GET "https://api.notion.com/v1/databases/DATABASE_ID" \
+-H "Authorization: Bearer YOUR_TOKEN" \
+-H "Notion-Version: 2022-06-28"
